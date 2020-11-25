@@ -1,23 +1,11 @@
-Jordan Tellez Bookmark App
+Bookmark Inc.
 
-User Stories
-As a user:
+The user can bookmark multiple websites and be able to filter by rating. When the user clicks the add button, the app expands so the user can input the title of the website, give the site a rating between 5 stars and 1 star from the dropdown, and add a description. URL must include HTTP/HTTPS. The form can reset and canceled if needed by the user. 
+Once the site is bookmarked, the user can click on the link to visit the site.
+Lastly, the user can delete the bookmark links that have been saved.
 
-I can add bookmarks to my bookmark list. Bookmarks contain:
+Check out the Bookmark App for yourself! 
+https://thinkful-ei-tiger.github.io/Jordan-Tellez-Bookmark-App/
 
-title
-url link
-description
-rating (1-5)
-I can see a list of my bookmarks when I first open the app
 
-All bookmarks in the list default to a "condensed" view showing only title and rating
-I can click on a bookmark to display the "detailed" view
-
-Detailed view expands to additionally display description and a "Visit Site" link
-I can remove bookmarks from my bookmark list
-
-I receive appropriate feedback when I cannot submit a bookmark
-
-Check all validations in the API documentation (e.g. title and url field required)
-I can select from a dropdown (a <select> element) a "minimum rating" to filter the list by all bookmarks rated at or above the chosen selection
+Created by Jordan Tellez
