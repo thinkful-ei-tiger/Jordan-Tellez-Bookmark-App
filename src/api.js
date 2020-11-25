@@ -1,6 +1,6 @@
 const BASE_URL =
   "https://thinkful-list-api.herokuapp.com/jordan-tellez/bookmarks";
-
+// check fetch for error and return the errors
 function listApiFetch(...args) {
   let error;
   return fetch(...args)
@@ -10,7 +10,12 @@ function listApiFetch(...args) {
         error = {
           code: res.status,
         };
+        if (!res.headers.get('content-type').includes('json')) {
+          error.message = res.statusText;
+          return Promise.reject(error);
+        }
       }
+      
 
       // In either case, parse the JSON stream:
       return res.json();
@@ -25,7 +30,7 @@ function listApiFetch(...args) {
       // Otherwise give back the data as resolved Promise
       return data;
     });
-}
+};
 
 const getBookmarks = function () {
   return fetch(`${BASE_URL}`);

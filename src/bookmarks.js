@@ -22,11 +22,9 @@ const generateBookMarkHtml = function (bookmark) {
       <div class="bookmark-condensed-container js-bookmark-condensed-container" data-item-id="${bookmark.id}">
         <button class="expand-button js-expand-button">...</button>  
         <h2 class="bookmark-name js-bookmark-name">${bookmark.title}</h2>
-
         <div class="bookmark-rating js-bookmark-rating">
           ${bookmarkRating}
         </div>
-
         <div class="bookmark-expand js-bookmark-expand-container ${bookmarkExpand}">
           <p>Description: ${bookmark.desc}</p>
           <div class="actions">
@@ -34,8 +32,6 @@ const generateBookMarkHtml = function (bookmark) {
             <button class="delete-button js-delete-button">Delete</button>
           </div>
         </div>
-
-
       </div>
     `;
 
@@ -99,9 +95,9 @@ const generateBookMarkAddHtml = function () {
       <label class="bookmark-hide" for="rating1">1 star</label>
       <input type="radio" name="rating" id="rating1" value="1">1 star<br>
     </div>
-    <lable class="form">Description:<br>
+    <label class="form">Description:<br>
       <textarea name="desc" id="bookmark-description" cols="100" rows="10" ></textarea>
-    </lable><br>
+    </label><br>
     <label class="form" for="url">Bookmark URL:</label><br>
     <input type="url" name="url" id="url" required><br>
     <div class="url-warning-container">
