@@ -154,7 +154,7 @@ const serializeJson = function (form) {
 //change on click adding: false => adding: true
 const handleBookMarkAdd = function () {
     $('#main').on('click', '.js-button-add', function () {
-        //console.log('add button was clicked')
+        console.log('add button was clicked')
         if (!STORE.adding) {
             STORE.adding = true;
         }
@@ -163,7 +163,7 @@ const handleBookMarkAdd = function () {
 }
 //bookmark form
 const handleBookmarkSubmit = function () {
-    $('.add-bookmark-form').submit(function (event) {
+    $('.add-bookmark-form').on('click',function (event) {
         event.preventDefault();
 
         let formElement = $('.add-bookmark-form')[0];
@@ -187,7 +187,7 @@ const render = function () {
     if (STORE.adding) {
         //console.log('adding test')
         $('.user-controls').toggleClass('bookmark-hide');
-        $('.js-error-container-main').toggleClass('bookmark-hide');
+        //$('.js-error-container-main').toggleClass('bookmark-hide');
         $('.js-bookmark-container').html(generateBookMarkAddHtml());
         renderError()
         bindEventListeners();
